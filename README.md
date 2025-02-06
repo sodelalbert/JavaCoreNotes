@@ -49,19 +49,27 @@ for developing web applications, mobile applications, enterprise software, and e
 
 ## Manual Building
 
-```Java
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
-}
+To compile a Java program, you need to have the Java Development Kit (JDK) installed on your system.
+
+```
+project/
+│── src/
+│   └── org/example/Main.java
+└── target/ (this will store compiled classes)
 ```
 
-To be udpated.
 ```bash
-javac Main.java
-java Main  
+javac -d target src/org/example/Main.java
 ```
+
+When executing a Java class, the fully qualified class name (FQCN) should match its package structure ,
+but it should not include the target/classes directory.
+
+```bash
+java -cp target/classes org.example.Main  
+```
+`-cp target/classes` sets the classpath to the compiled files.  
+`org.example.Main` correctly represents the package and class name.  
 
 
 ## Maven and Gradle
