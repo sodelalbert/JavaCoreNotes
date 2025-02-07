@@ -29,7 +29,7 @@ public class DataTypes {
         System.out.printf("Index of 'l': %d%n", s.indexOf("l")); // 2
 
         System.out.printf("First character: %c%n", s.charAt(0)); // H
-        System.out.printf("Replace 'H' with 'h': %s%n", s.replace("H", "h")); // hello!, s variable is equal to Hello.
+        System.out.printf("Replace 'H' with 'h': %s%n", s.replace("H", "h")); // hello!
         System.out.printf("Substring (0, 3): %s%n", s.substring(0, 3)); // Hel
 
         System.out.printf("Uppercase: %s%n", s.toUpperCase()); // HELLO!
@@ -51,15 +51,19 @@ public class DataTypes {
 
     }
 
-    public static void UtilityClasses() {
-        // TODO: Notes to be finalized about wrapper classes for primitive objects.
-        Integer a = Integer.valueOf(2);
-        Integer b = 3; // Autoboxing
+    public static void WrapperClassesForPrimitives() {
+        /*
+        Autoboxing: Automatic conversion of primitive data type to its corresponding wrapper class.
+            int -> Integer
+        Unboxing: Automatic conversion of wrapper class to its corresponding primitive data type.
+            Integer -> int
+         */
+
+        int num = 10;
+        Integer integer = num; // Autoboxing , Automatically converts int to Integer
+
+        int int2 = integer; // Unboxing , Automatically converts Integer to int
+        System.out.println("After unboxing: " + int2);
+
     }
-
-    public static void Autoboxing() {
-        // TODO: Implement autoboxing example
-    }
-
-
 }

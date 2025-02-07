@@ -9,7 +9,7 @@ Repository is based
 on [Java Masterclass 2025](https://www.udemy.com/course/java-the-complete-java-developer-course)
 course by Tim Buchalka.
 
-_Note: Readme line length in IntelliJ IDEA is fixed to 88 characters._ 
+_Note: Readme line length in IntelliJ IDEA is fixed to 88 characters._
 
 **Features**
 
@@ -26,34 +26,36 @@ Table of Contents
 =================
 
 <!-- TOC -->
+
 * [Java Tutorial Notes](#java-tutorial-notes)
-  * [ToDo List](#todo-list)
+    * [ToDo List](#todo-list)
 * [Table of Contents](#table-of-contents)
     * [ToDo List](#todo-list-1)
-  * [Introduction to Java](#introduction-to-java)
-    * [Features](#features)
-  * [JDK / JRE / JVM](#jdk--jre--jvm)
-    * [JVM - Java Virtual Machine](#jvm---java-virtual-machine)
-    * [JRE - Java Runtime Environment](#jre---java-runtime-environment)
-    * [JDK - Java Development Kit](#jdk---java-development-kit)
-  * [Manual Building](#manual-building)
-    * [Compilation](#compilation)
-    * [Running Application](#running-application)
-  * [Maven and Gradle](#maven-and-gradle)
-  * [Java Memory Management](#java-memory-management)
-  * [1. Data Types](#1-data-types)
-    * [Primitive Data Types](#primitive-data-types)
-    * [Reference Data Types](#reference-data-types)
-    * [String Operations](#string-operations)
-    * [Type casting](#type-casting)
-    * [Autoboxing](#autoboxing)
-  * [Control Flow](#control-flow)
-  * [Object Oriented Programming](#object-oriented-programming)
-  * [Arrays](#arrays)
-  * [Lists, ArrayList, LinkedList, Iterators, Autoboxing](#lists-arraylist-linkedlist-iterators-autoboxing)
-  * [Abstraction in Java](#abstraction-in-java)
-  * [Design Patterns](#design-patterns)
-  * [Data Structures](#data-structures)
+    * [Introduction to Java](#introduction-to-java)
+        * [Features](#features)
+    * [JDK / JRE / JVM](#jdk--jre--jvm)
+        * [JVM - Java Virtual Machine](#jvm---java-virtual-machine)
+        * [JRE - Java Runtime Environment](#jre---java-runtime-environment)
+        * [JDK - Java Development Kit](#jdk---java-development-kit)
+    * [Manual Building](#manual-building)
+        * [Compilation](#compilation)
+        * [Running Application](#running-application)
+    * [Maven and Gradle](#maven-and-gradle)
+    * [Java Memory Management](#java-memory-management)
+    * [1. Data Types](#1-data-types)
+        * [Primitive Data Types](#primitive-data-types)
+        * [Reference Data Types](#reference-data-types)
+        * [String Operations](#string-operations)
+        * [Type casting](#type-casting)
+        * [Autoboxing](#autoboxing)
+    * [Control Flow](#control-flow)
+    * [Object Oriented Programming](#object-oriented-programming)
+    * [Arrays](#arrays)
+    * [Lists, ArrayList, LinkedList, Iterators, Autoboxing](#lists-arraylist-linkedlist-iterators-autoboxing)
+    * [Abstraction in Java](#abstraction-in-java)
+    * [Design Patterns](#design-patterns)
+    * [Data Structures](#data-structures)
+
 <!-- TOC -->
 
 ---
@@ -266,28 +268,51 @@ public static void StringOperations() {
 
 ### Type casting
 
-
 byte → short → int → long → float → double
 
 ```java
 public static void Casting() {
 
-  // Expanding - Implicit Type Casting
-  int a = 10;
-  int b = a; // done automatically
-  System.out.println(b);
+    // Expanding - Implicit Type Casting
+    int a = 10;
+    int b = a; // done automatically
+    System.out.println(b);
 
-  //Narrowing - Explicit Type Casting
-  double c = 1;
-  short d = (short) c;
-  System.out.println(d);
+    //Narrowing - Explicit Type Casting
+    double c = 1;
+    short d = (short) c;
+    System.out.println(d);
 
 }
 ```
 
 ### Autoboxing
 
+Autoboxing in Java is the automatic conversion that the Java compiler makes between the
+primitive types and their corresponding object wrapper classes. For example, converting
+an int to an Integer, a double to a Double, and so on. This feature was introduced in
+Java 5 to simplify the code and make it more readable.
 
+```java
+public class AutoboxingExample {
+    public static void main(String[] args) {
+        // Autoboxing: primitive to wrapper object
+        int primitiveInt = 5;
+        Integer wrapperInt = primitiveInt; // Automatically converts int to Integer
+
+        // Unboxing: wrapper object to primitive
+        Integer anotherWrapperInt = new Integer(10);
+        int anotherPrimitiveInt = anotherWrapperInt; // Automatically converts Integer to int
+
+        System.out.println("Wrapper Integer: " + wrapperInt);
+        System.out.println("Primitive int: " + anotherPrimitiveInt);
+    }
+}
+```
+
+In this example, the primitive int is automatically converted to an Integer object
+(autoboxing), and the Integer object is automatically converted back to a primitive
+int  (unboxing).
 
 ## Control Flow
 
