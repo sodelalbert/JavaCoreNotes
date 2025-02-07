@@ -148,14 +148,10 @@ Key Components of JDK:
 
 ```mermaid
 graph TD
-;
-    R1["Java Source Code _\n(.java)"] --> R2["Java Compiler _\n(javac)"]
-    R2 --> R3["Bytecode _\n(.class)"]
+    R1["Java Source Code (.java)"] --> R2["Java Compiler (javac)"]
+    R2 --> R3["Bytecode (.class)"]
 ```
 
-graph TD;
-R1["Java Source Code (.java)"] --> R2["Java Compiler (javac)"]
-R2 --> R3["Bytecode (.class)"]
 To compile a Java program, you need to have the Java Development Kit (JDK) installed on
 your system.
 
