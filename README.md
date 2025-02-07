@@ -9,6 +9,8 @@ Repository is based
 on [Java Masterclass 2025](https://www.udemy.com/course/java-the-complete-java-developer-course)
 course by Tim Buchalka.
 
+_Note: Readme line length in IntelliJ IDEA is fixed to 88 characters._ 
+
 **Features**
 
 * 📌 Concise explanations of Java fundamentals and advanced topics
@@ -24,30 +26,34 @@ Table of Contents
 =================
 
 <!-- TOC -->
-
 * [Java Tutorial Notes](#java-tutorial-notes)
-    * [ToDo List](#todo-list)
+  * [ToDo List](#todo-list)
 * [Table of Contents](#table-of-contents)
     * [ToDo List](#todo-list-1)
-    * [Introduction to Java](#introduction-to-java)
-        * [Features](#features)
-    * [JDK / JRE / JVM](#jdk--jre--jvm)
-        * [JVM - Java Virtual Machine](#jvm---java-virtual-machine)
-        * [JRE - Java Runtime Environment](#jre---java-runtime-environment)
-        * [JDK - Java Development Kit](#jdk---java-development-kit)
-    * [Manual Building](#manual-building)
-        * [Compilation](#compilation)
-        * [Running Application](#running-application)
-    * [Maven and Gradle](#maven-and-gradle)
-    * [1. Data Types](#1-data-types)
-    * [Control Flow](#control-flow)
-    * [Object Oriented Programming](#object-oriented-programming)
-    * [Arrays](#arrays)
-    * [Lists, ArrayList, LinkedList, Iterators, Autoboxing](#lists-arraylist-linkedlist-iterators-autoboxing)
-    * [Abstraction in Java](#abstraction-in-java)
-    * [Design Patterns](#design-patterns)
-    * [Data Structures](#data-structures)
-
+  * [Introduction to Java](#introduction-to-java)
+    * [Features](#features)
+  * [JDK / JRE / JVM](#jdk--jre--jvm)
+    * [JVM - Java Virtual Machine](#jvm---java-virtual-machine)
+    * [JRE - Java Runtime Environment](#jre---java-runtime-environment)
+    * [JDK - Java Development Kit](#jdk---java-development-kit)
+  * [Manual Building](#manual-building)
+    * [Compilation](#compilation)
+    * [Running Application](#running-application)
+  * [Maven and Gradle](#maven-and-gradle)
+  * [Java Memory Management](#java-memory-management)
+  * [1. Data Types](#1-data-types)
+    * [Primitive Data Types](#primitive-data-types)
+    * [Reference Data Types](#reference-data-types)
+    * [String Operations](#string-operations)
+    * [Type casting](#type-casting)
+    * [Autoboxing](#autoboxing)
+  * [Control Flow](#control-flow)
+  * [Object Oriented Programming](#object-oriented-programming)
+  * [Arrays](#arrays)
+  * [Lists, ArrayList, LinkedList, Iterators, Autoboxing](#lists-arraylist-linkedlist-iterators-autoboxing)
+  * [Abstraction in Java](#abstraction-in-java)
+  * [Design Patterns](#design-patterns)
+  * [Data Structures](#data-structures)
 <!-- TOC -->
 
 ---
@@ -185,7 +191,16 @@ java -cp target/classes org.example.Main
 
 ## Maven and Gradle
 
+## Java Memory Management
+
 ## 1. Data Types
+
+```mermaid
+graph TD
+    R1["Data Types"]
+    R1 --> R2["Primitive Data Types"]
+    R1 --> R3["Reference Data Types"]
+```
 
 ### Primitive Data Types
 
@@ -204,23 +219,73 @@ Primitive types are predefined in Java and store simple values directly in memor
 
 ### Reference Data Types
 
+In Java, reference data types are types that refer to objects rather than storing the
+actual value directly. They are created using constructors and are managed by the Java
+garbage collector. Reference data types include classes, interfaces, arrays, and
+enumerations. Key characteristics of reference data types:
+
+* They store references (memory addresses) to the actual data.
+* They can be used to create complex data structures like objects and arrays.
+* They are created using the new keyword (except for strings, which can also be created
+  using string literals).
+* They are managed by the garbage collector, which automatically handles memory
+  allocation
+  and de-allocation.
+
 | Type     | Example                         |
 |----------|---------------------------------|
 | `String` | `String text = "Hello, Java!";` |
 | `Array`  | `int[] numbers = {1, 2, 3};`    |
 | `Class`  | `Person p = new Person();`      |
 
-Reference types are **created using constructors** and managed by
-**garbage collection**.
+### String Operations
 
-#### String Operations
+**Is String Mutable in Java?**  
+No, String is immutable in Java. This means that once a String object is created, its
+value cannot be changed. Any modification to a String creates a new object rather than
+changing the existing one.
+
+Most usefully methods from String class. Note that variable `s` remains unchanged during
+the exersice.
 
 ```java
-String text = "Hello, Java!";
-String name = "Alice";
+public static void StringOperations() {
+    String s = "Hello!";
+
+    System.out.printf("Length: %d%n", s.length()); // 6
+    System.out.printf("Index of 'l': %d%n", s.indexOf("l")); // 2
+
+    System.out.printf("First character: %c%n", s.charAt(0)); // H
+    System.out.printf("Replace 'H' with 'h': %s%n", s.replace("H", "h")); // hello!
+    System.out.printf("Substring (0, 3): %s%n", s.substring(0, 3)); // Hel
+
+    System.out.printf("Uppercase: %s%n", s.toUpperCase()); // HELLO!
+    System.out.printf("Lowercase: %s%n", s.toLowerCase()); // hello!
+}
 ```
 
-## Type casting 
+### Type casting
+
+
+byte → short → int → long → float → double
+
+```java
+public static void Casting() {
+
+  // Expanding - Implicit Type Casting
+  int a = 10;
+  int b = a; // done automatically
+  System.out.println(b);
+
+  //Narrowing - Explicit Type Casting
+  double c = 1;
+  short d = (short) c;
+  System.out.println(d);
+
+}
+```
+
+### Autoboxing
 
 
 
