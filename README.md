@@ -1,4 +1,4 @@
-# Java Tutorial Notes
+# Java Core Notes
 
 Java Tutorial Notes is a comprehensive reference guide designed to serve as a base
 language reference and an interview preparation resource. This project provides
@@ -314,7 +314,71 @@ In this example, the primitive int is automatically converted to an Integer obje
 (autoboxing), and the Integer object is automatically converted back to a primitive
 int  (unboxing).
 
-## Control Flow
+## 2. Control Flow
+
+
+### If-Else Statement
+```java
+public class IfElseExample {
+    public static void main(String[] args) {
+        int num = 10;
+        if (num > 0) {
+            System.out.println("Positive Number");
+        } else {
+            System.out.println("Negative Number");
+        }
+    }
+}
+```
+
+### Switch Statement
+
+```java
+public class SwitchDefaultExample {
+    public static void main(String[] args) {
+        int day = 7;
+        switch (day) {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            default:
+                System.out.println("Invalid Day"); // Executes if day is not 1, 2, or 3
+        }
+    }
+}
+```
+
+### For Loop
+
+```java
+for (int i = 0; i < 5; i++) {
+    System.out.println("Iteration: " + i);
+}
+```
+
+### While Loop
+```java
+int i = 0;
+while (i < 5) {
+    System.out.println("Iteration: " + i);
+    i++;
+}
+```
+
+### Do-While Loop
+```java
+int i = 0;
+do {
+    System.out.println("Iteration: " + i);
+    i++;
+} while (i < 5);
+```
 
 ## Object Oriented Programming
 
