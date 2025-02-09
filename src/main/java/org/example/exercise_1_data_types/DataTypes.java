@@ -1,5 +1,7 @@
 package org.example.exercise_1_data_types;
 
+import java.util.Scanner;
+
 public class DataTypes {
 
     public static void PrimitiveDataTypes() {
@@ -66,4 +68,17 @@ public class DataTypes {
         System.out.println("After unboxing: " + int2);
 
     }
+
+    public static void ReadInput() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter a number: ");
+//        int input = scanner.nextInt();
+//        String input = scanner.nextLine();
+        String input = scanner.next();
+
+        System.out.println("You entered: " + input);
+
+    }
+
 }

@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.exercise_1_data_types.DataTypes;
 import org.example.exersice_2_controll_flow.ControlFlow;
 
 public class Main {
@@ -12,6 +13,7 @@ public class Main {
 //        DataTypes.StringOperations();
 //        DataTypes.Casting();
 //        DataTypes.WrapperClassesForPrimitives();
+//        DataTypes.ReadInput();
 
         /*
          * Exercise 2: Control Flow
@@ -22,5 +24,6 @@ public class Main {
 //        ControlFlow.IfElse(100);
 
     }
+
 
 }
